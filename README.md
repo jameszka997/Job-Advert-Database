@@ -16,32 +16,31 @@ The primary purpose of this project was to catalogue jobs of interest to me, pri
 
 ```mermaid
 flowchart LR;
-A(["Set Search Filter on HiringCafe"]) --> B;
-B(["Select & Copy all the search results from '*Nr.* Jobs'"]) --> |Ctrl + Shift + V| C;
-C(["Input data into Excel as simple text"]) --> D;
-D(["Set-up Data Cleaning Columns for the data"]) --> E;
-E(["Clean-up messy or incorrectly aligned data"]) --> |Utilize the look-up function for transfer| F;
-F(["Input cleaned data into structured data format sheet"]) --> G;
-G(["Add date added and type of search information"]) --> |Cross-check function against database sheet| H;
-H(["Verify no duplicates are added"]) --> I;
-I(["Add new job ad entries into finalized database"])
+A(["Import (*Copy+Paste*) Search Results into Excel"]) --> |'Name' & 'Quality check' columns| B;
+B(["Set-up Helper columns for data cleaning"]) --> C;
+C(["Clean-up messy or incorrectly aligned data"]) --> |Custom Google ArrayFormula| D;
+D(["Transfer data into structured format"]) --> E;
+E(["Add search type/date added information"]) --> F
+F(["Add new job ad entries into finalized database"])
 ```
 
 
 ## 🚧 Problem & Challenges
 
-- Messy initial datastructure when inputting results into Excel
+- Messy initial datastructure when inputting results into Excel/Google Sheets
 - Developing quality checks & cleaning methods to reliably process the data.
 - Identifying key information snippets and developing supporting column structures for reliable long-term database management
+- Performance testing with Google Sheets & Microsoft Excel
+- Current manual copy+paste method captures only the first job advert from each company, missing out on all additional jobs of interest from the same company
 
 
 
 
-##💡 Future Aims
+## 💡 Future Aims
 
-- Developing partial- or full automated workflow to lessen the manual work required for new data input
-- Making SQL database of finished and cleaned data for security and storage
-- Potentially identifying the areas of interest for the data from the HTML code  to quicken data scraping.
+- Adapting job scraping Python script by (MarkDamienCosadio)[https://github.com/MarkDamienCosadio/Job-Scraper] as an adaptable Jupyter Notebook script to automate the data import, cleaning & integration process from the current manual format
+- Adapting SQL database to replace current Excel-based database for security and storage
+- Identifying areas of interest for the data from the HTML code to make data scraping quicker, as well as capturing all job ads from the same company
 - Identifying key trends, skills of interest, companies, etc. as the database develops and more data is accrued
 
 
@@ -63,12 +62,13 @@ I(["Add new job ad entries into finalized database"])
 | **Job Posting** | Quality check utilized for data cleaning & checks from the source data |
 | **Added Date** | Date when information was added |
 | **Type of Search** | Search filter which was utilized for data gathering |
+| **Posted Date (DATE format)** | Calculating *YYYY/MM/DD* format for Posted Time from *Posted Time, Added Date* columns |
 
 
 
 ### ⭐ Impact
 
-This project has significantly contributed to my understand to the design of reliable databases, and the difficulties which come with database design and proper processing pipelines for data entry.
+This project has significantly contributed to my understanding of reliable database design, and the difficulties which come with database design and proper processing pipelines for data entry.
 
 The current database has allowed me to more efficiently gather information about potential jobs and job areas of interest for the future as my career progresses.
 
@@ -82,7 +82,7 @@ It has contributed to my understanding to the principles which need to be involv
 - Developing database to construct a long-term database to track jobs of interest and identify jobs, skills, companies and roles of interest for the future
 - Understanding data integration pipeline development
 - Data cleaning, processing, restructuring and quality check development
-- Trend analysis & finding company industry which are most likely to contain relevant information of interest
+- Trend analysis & finding company/industry/adverts which are most likely to contain relevant information of interest
 
 
 ## 🛠️ Tools & Technologies
@@ -92,7 +92,7 @@ It has contributed to my understanding to the principles which need to be involv
 | Tool | Task |
 | -- | -- |
 | **Source Website** | HiringCafe source website which performs job advert aggregation and filtering for key skills & summary of the job advert text|
-| **Excel** | Data aggregation, database management & analysis |
+| **Excel / Google Sheets** | Data aggregation, database management & analysis |
 | **VS Code** | Managing scripts & documentation writing |
 | **Markdown** | Documentation and README files |
 
