@@ -38,7 +38,7 @@ F(["Add new job ad entries into finalized database"])
 
 ## 💡 Future Aims
 
-- Adapting job scraping Python script by (MarkDamienCosadio)[https://github.com/MarkDamienCosadio/Job-Scraper] as an adaptable Jupyter Notebook script to automate the data import, cleaning & integration process from the current manual format
+- Adapting job scraping Python script by [MarkDamienCosadio](https://github.com/MarkDamienCosadio/Job-Scraper) as an adaptable Jupyter Notebook script to automate the data import, cleaning & integration process from the current manual format
 - Adapting SQL database to replace current Excel-based database for security and storage
 - Identifying areas of interest for the data from the HTML code to make data scraping quicker, as well as capturing all job ads from the same company
 - Identifying key trends, skills of interest, companies, etc. as the database develops and more data is accrued
