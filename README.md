@@ -12,7 +12,7 @@ The primary purpose of this project was to catalogue jobs of interest to me, pri
 
 
 
-## 🛠️ Workflow
+## 🛠️ Workflow (v1.0)
 
 ```mermaid
 flowchart LR;
@@ -23,6 +23,15 @@ D(["Transfer data into structured format"]) --> E;
 E(["Add search type/date added information"]) --> F
 F(["Add new job ad entries into finalized database"])
 ```
+
+
+
+
+## Update (v2.0)
+
+A prototype method was formulated by first adapting the Python script of [MarkDamienCosadio](https://github.com/MarkDamienCosadio/Job-Scraper) into a modular and easier to use and troubleshoot Jupyter Notebook. The prototype is currently within the testing & finetuning stage to adapt the code to the scope data extraction, as well as make it easier and more modular to scrape filtered and saved jobs of interest from Hiring Cafe.
+
+
 
 
 ## 🚧 Problem & Challenges
