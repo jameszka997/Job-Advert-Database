@@ -25,7 +25,7 @@ F(["Add new job ad entries into finalized database"])
 ```
 
 
-
+---
 
 ## Update (v2.0)
 
